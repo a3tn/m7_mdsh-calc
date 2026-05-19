@@ -143,9 +143,23 @@
     }
 
     function calculate(){
-      try{
-        display.value = eval(display.value);
-      }
+
+  try{
+
+    if(display.value.includes("/0")){
+      display.value = "Error";
+      return;
+    }
+
+    display.value = eval(display.value);
+
+  }
+
+  catch{
+    display.value = "Error";
+  }
+
+}
       catch{
         display.value = "Error";
       }
