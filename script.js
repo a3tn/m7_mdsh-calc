@@ -17,7 +17,7 @@ function calculate(){
 
   let expression = display.value;
 
-  // Prevent division by zero
+  
   if(expression.includes("/0")){
     display.value = "Cannot divide by zero";
     return;
@@ -27,7 +27,7 @@ function calculate(){
 
     let result = eval(expression);
 
-    // Add to history
+    
     let listItem = document.createElement("li");
     listItem.textContent = `${expression} = ${result}`;
     historyList.prepend(listItem);
